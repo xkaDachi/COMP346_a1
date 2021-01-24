@@ -164,5 +164,7 @@ Terminating client thread. Running time 3 milliseconds
  Account number 12535 Account Balance 750.0 Message done
  
 Terminating client thread. Running time 4 milliseconds
+
 Terminating server thread. Running time 15 milliseconds.
+
 Terminating network thread - Client disconnected Server disconnected

@@ -1,5 +1,4 @@
 
-
  Activating the network ...
 
  Initializing the server ...
@@ -119,7 +118,6 @@
  Account number 43817 Account Balance 100.0 Message done
 
  Account number 92018 Account Balance -250.0 Message done
-Terminating client thread. Running time 3 milliseconds
 
  Account number 42850 Account Balance 1000.0 Message done
 
@@ -143,6 +141,8 @@ Terminating client thread. Running time 3 milliseconds
 
  Account number 62023 Account Balance 202200.0 Message done
 
+ Terminating client sending thread. Running time 4 milliseconds
+
  Account number 01314 Account Balance 1.05E7 Message done
 
  Account number 20922 Account Balance 240.0 Message done
@@ -151,20 +151,20 @@ Terminating client thread. Running time 3 milliseconds
 
  Account number 83530 Account Balance 980000.0 Message done
 
- Account number 83830 Account Balance 125.0 Message done
+ Account number 13331 Account Balance 1150.0 Message done
 
- Account number 72820 Account Balance 100000.0 Message done
+ Account number 81368 Account Balance -1650.0 Message done
 
- Account number 92318 Account Balance 2400.0 Message done
+ Account number 91214 Account Balance 1780.0 Message done
 
- Account number 42520 Account Balance 1000.0 Message done
+ Account number 91245 Account Balance -1100.0 Message done
 
- Account number 61612 Account Balance 25.0 Message done
+ Account number 42018 Account Balance -1020.0 Message done
 
- Account number 12535 Account Balance 750.0 Message done
- 
-Terminating client thread. Running time 4 milliseconds
+ Account number 62023 Account Balance 224200.0 Message done
 
-Terminating server thread. Running time 15 milliseconds.
+ Terminating client receiving thread. Running time 5 milliseconds
 
-Terminating network thread - Client disconnected Server disconnected
+ Terminating server thread. Running time 14 milliseconds.
+
+ Terminating network thread - Client disconnected Server disconnected

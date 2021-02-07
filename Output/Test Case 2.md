@@ -123,11 +123,11 @@
 
  Account number 92716 Account Balance 1000.0 Message done
 
+ Terminating client sending thread. Running time 6 milliseconds
+
  Account number 01113 Account Balance 300.0 Message done
 
  Account number 60716 Account Balance 1000.0 Message done
-
- Terminating client thread. Running time 5 milliseconds
 
  Account number 01823 Account Balance 860.0 Message done
 
@@ -163,8 +163,8 @@
 
  Account number 12535 Account Balance 750.0 Message done
 
- Terminating client thread. Running time 10 milliseconds
+ Terminating server thread. Running time 22 milliseconds.
 
  Terminating network thread - Client disconnected Server disconnected
 
- Terminating server thread. Running time 24 milliseconds.
+ Terminating client receiving thread. Running time 7 milliseconds

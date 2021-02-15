@@ -11,11 +11,18 @@ Small timing discrepancies may be ok for our purposes, but a variety of other ap
 ```
 ```
 Brief Explanation
-
+----------------------------------------------------------------------------------------------------------------------
+-> Network objNetwork = new Network("network");
+-> objNetwork.start();
+----------------------------------------------------------------------------------------------------------------------
 //Activating the network ...
 - From the driver, we create a network object. The If statement in the the network constructor then it switch thread to the server; 
 also has the yield function in run() when we call start() in the driver
 
+----------------------------------------------------------------------------------------------------------------------
+-> Server objServer = new Server();
+-> objServer.start();
+----------------------------------------------------------------------------------------------------------------------
 //Initializing the server ...
 -From the driver, we create a server object. In the server constructor, create a network object with parameter "server", 
 which will activate the else statement of the network constructor
@@ -27,19 +34,21 @@ It goes in the else statement in network constructor since it doesn't have the p
 //Inializing the Accounts database ...
 sysout from the server constructor
 
-initializeAccount() : Take the account text file and create account object
+initializeAccount() : Take the account text file and create account objects with an Account[] for AccountNumber, AccountType, FirstName, LastName, Balance.
 
 //Connecting server to network ..
 sysout from the server constructor. Also print out after the above line
 
+----------------------------------------------------------------------------------------------------------------------
+-> Client objClient1 = new Client("sending");
+-> objClient1.start();`
+----------------------------------------------------------------------------------------------------------------------
 //Initializing client sending application ...
 -From the driver we make a client object and we use the Client constructor, create client obejct with parameter "sending".  
-
 
 //Activating network components for client...
 From the Client constructor, we also create a network object with parameter "client", printing out the above statement. 
 Goes in the else statement of the network constructor since it is not a "network" parameter.
-
 
 //Initializing the transactions
 after creating the network object, inside the client constructor then calls readTransaction(): Read the text file input for transaction
@@ -47,7 +56,10 @@ after creating the network object, inside the client constructor then calls read
 //Connecting client to network
 a simple sysout after readTransactions().
 
-
+----------------------------------------------------------------------------------------------------------------------
+-> Client objClient2 = new Client("receiving");
+-> objClient2.start();
+----------------------------------------------------------------------------------------------------------------------
 //Initializing client receiving application ..
 create another Client object with parameter receiving from the Driver.
 Go to the elses statement of the client constructor and print out:
@@ -57,8 +69,10 @@ In that function, it checks if the buffer is full or not, the set status as sent
 The other client object is for receiving, which will go to receiveTransaction(), 
 then it will check if the buffer is empty or not, if it is empty it will switch back to the send client thread 
 if it is not it will receive the transaction and print out the transaction statement then increment the i.
-After done all the transaction it will disconnect and terminate the sending client thread first.
+After all the transactions are done, it will disconnect and terminate the sending client thread first.
 Then the server after processing all the transaction, it will disconnect print out terminate the server thread,
 Then the receiving client thread will disconnect then terminate,
 Then because both clients are disconnected and the server is also disconnected  it will terminate the network thread.
+
+***In the run(), when everything is done, it will terminate the sending and the receiving client at the same time, then server will terminate as all transactions have been processed. Once both clients and server are disconnected, the network will shut down.
 ```
